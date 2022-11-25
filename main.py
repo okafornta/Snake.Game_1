@@ -5,9 +5,9 @@ import time
 # Creating screen
 screen = turtle.Screen()
 screen.title("SNAKE GAME")
-screen.setup(width=700, height=700)
+screen.setup(width=500, height=700)
 screen.tracer(0)
-screen.bgcolor("#1d1d1d")
+screen.bgcolor("#000000")
 
 # Creating border
 turtle.speed(5)
@@ -15,7 +15,7 @@ turtle.pensize(4)
 turtle.penup()
 turtle.goto(-310, 250)
 turtle.pendown()
-turtle.color("green")
+turtle.color("white")
 turtle.forward(600)
 turtle.right(90)
 turtle.forward(500)
@@ -35,7 +35,7 @@ delay = 0.1
 snake = turtle.Turtle()
 snake.speed()
 snake.shape("square")
-snake.color("black")
+snake.color("green")
 snake.penup()
 snake.goto(0, 0)
 snake.direction = "stop"
@@ -43,10 +43,10 @@ snake.direction = "stop"
 # Creating snake food
 fruit = turtle.Turtle()
 fruit.speed(0)
-fruit.shape("square")
-fruit.color("pink")
+fruit.shape("circle")
+fruit.color("white")
 fruit.penup()
-fruit.goto(30, 30)
+fruit.goto(20, 20)
 
 old_fruit = []
 
@@ -116,7 +116,7 @@ while True:
         new_fruit = turtle.Turtle()
         new_fruit.speed(0)
         new_fruit.shape("circle")
-        new_fruit.color("purple")
+        new_fruit.color("red")
         new_fruit.penup()
         old_fruit.append(new_fruit)
 
